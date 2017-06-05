@@ -1,0 +1,85 @@
+{
+  "code": 0, 
+  "data": [
+    {
+      "id": "23", 
+      "title": "你要么出众，要么出局", 
+      "author": "李尚龙", 
+      "price": 28.7, 
+      "pudate": "1488437386", 
+      "status": "true", 
+      "cateid": "3", 
+      "images": [
+        {
+          "image_id": "24", 
+          "image_name": "23.jpg", 
+          "book_id": "23"
+        }
+      ]
+    }, 
+    {
+      "id": "22", 
+      "title": "如何听懂音乐", 
+      "author": "（美）艾伦·科普兰，曹利群 译", 
+      "price": 35.9, 
+      "pudate": "1488437244", 
+      "status": "true", 
+      "cateid": "3", 
+      "images": [
+        {
+          "image_id": "25", 
+          "image_name": "22.jpg", 
+          "book_id": "22"
+        }
+      ]
+    }, 
+    {
+      "id": "21", 
+      "title": "睡不着", 
+      "author": "Tango 著", 
+      "price": 24, 
+      "pudate": "1488437064", 
+      "status": "true", 
+      "cateid": "3", 
+      "images": [
+        {
+          "image_id": "23", 
+          "image_name": "21.jpg", 
+          "book_id": "21"
+        }
+      ]
+    }, 
+    {
+      "id": "20", 
+      "title": "看不见的岛屿", 
+      "author": "朱迪斯.莎兰斯基", 
+      "price": 70.4, 
+      "pudate": "1488436784", 
+      "status": "true", 
+      "cateid": "3", 
+      "images": [
+        {
+          "image_id": "22", 
+          "image_name": "20.jpg", 
+          "book_id": "20"
+        }
+      ]
+    }, 
+    {
+      "id": "19", 
+      "title": "不怕，萌就行", 
+      "author": "漫友文化", 
+      "price": 33.2, 
+      "pudate": "1488436603", 
+      "status": "true", 
+      "cateid": "2", 
+      "images": [
+        {
+          "image_id": "21", 
+          "image_name": "19.jpg", 
+          "book_id": "19"
+        }
+      ]
+    }
+  ]
+}
