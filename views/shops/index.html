@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>book</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top row">
+    <div class="container">
+      <ol class="breadcrumb loginout">
+        <li>后台管理</li>
+        <% if(username){%>
+          <li>当前登录用户：<%=username%></li>     
+          <li><a href="/shops/insert">添加商品</a></li>
+          <li><a href="/">回到主页</a></li>
+          <li><a href="/users/loginout">登出</a></li>
+        <%}%>     
+       </ol>
+    </div>
+  </nav>
+  <div class="shop-item container">
+    <div class="row">
+      <div class="col-ms-12">
+        <table class="table table-hover">
+          <tr class="active text-center">
+            <th class="text-center">商品编号</th>
+            <th class="text-center">商品名称</th>
+            <th class="text-center">商品价格</th>
+            <th class="text-center">商品数量</th>
+            <th class="text-center">商品图片</th>
+            <th class="text-center">商品（修改，删除）</th>
+          </tr>
+          <% for(var i in books) {%>
+            <tr class="text-center shop-list">
+              <td class="active"><%=books[i]._id%></td>
+              <td class="success"><%=books[i].title%></td>
+              <td class="warning"><%=books[i].price%></td>
+              <td class="danger"><%=books[i].num%></td>
+              <td class="info">
+                <img src="/images/<%=books[i].img%>" style="width: 100px"></td>
+              <td class="info">
+                <a href="/shops/update/<%=books[i]._id%>" class="btn btn-primary active">修改商品</a>
+                <a href="/shops/remove/<%=books[i]._id%>/<%=books[i].img%>" class="btn btn-default active">删除商品</a>
+              </td>
+            </tr>
+          <%}%>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="fenye text-center row">
+    <nav aria-label="Page navigation col-ms-12">
+      <ul class="pagination">
+        <% if(currentPage==1){%>
+            <li class="disabled">
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+        <%}else{%>
+            <li>
+              <a href="/shops/?page=currentPage-1" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+        <%}%>
+        
+            <% for(var i=1;i<=sumPage;i++){%>
+                <% if(currentPage==i){%>
+                    <li class="active"><a href="/shops/?page=<%=i%>"><%=i%></a></li>
+                <%}else{%>
+                    <li><a href="/shops/?page=<%=i%>"><%=i%></a></li>
+                <%}%>
+            <%}%>
+            
+          <% if(currentPage==sumPage){%>
+            <li class="disabled">
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+        <%}else{%>
+            <li>
+              <a href="/shops/?page=parseInt(currentPage+1)" aria-label="Next">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+        <%}%>
+      </ul>
+    </nav>
+  </div>
+ </body>
+</html>

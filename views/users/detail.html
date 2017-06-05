@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+	    <h1 class="text-center bg-danger">书籍详情页</h1>
+	   		<div class="bg-warning row">
+	   			<div class="col-md-12">
+			   		<h2 class="text-center">书名：<%=data.title%></h2>
+			   		<p class="text-center">价格：<%=data.price%></p>
+			   		<p class="text-center">序列号：<%=data.num%></p>	   		
+			   		<div class="text-center">
+			   			<p class="text-center">封面</p>
+			   			<p class="text-center"><span class="caret"></span></p>
+			   			<img src="/images/<%=data.img%>" style='width:200px' class="img-thumbnail">
+			   		</div>
+			   		<hr>
+		   		</div>
+	   		</div>
+	</div>
+</body>
+</html>

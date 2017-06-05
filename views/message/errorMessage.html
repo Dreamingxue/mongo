@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv='refresh' content='2,url=<%=urlPath%>'>
+</head>
+<body>
+<p><%=message%></P> 
+<P id='code'><p>
+		<script>
+			var int=2;
+			function countdown(){
+				document.getElementById('code').innerHTML=int+"s重新跳转"
+				int--;
+				if(int<0){
+					i=window.clearInterval(i)
+					int=2;
+				}
+			}
+			countdown();
+			setInterval(countdown,1000);
+		</script>
+</body>
+</html>
